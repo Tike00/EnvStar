@@ -374,6 +374,10 @@ export function StarMap({
   const highlightedNodes = activeNodeId
     ? adjacencyMap.get(activeNodeId) ?? new Set([activeNodeId])
     : null
+  const selectedChildNodeIds = useMemo(
+    () => new Set(selectedNodeId ? (nodeMap.get(selectedNodeId)?.childIds ?? []) : []),
+    [nodeMap, selectedNodeId],
+  )
 
   const handleCanvasClick = (event: MouseEvent<SVGSVGElement>) => {
     if (event.target === event.currentTarget) {
@@ -479,12 +483,14 @@ export function StarMap({
             const displayTitle = getDisplayTitle(node.title, node.fileName, node.isRoot)
             const orbitCenter = node.orbitCenterId ? nodeMap.get(node.orbitCenterId) : null
             const isLeftOrbit = orbitCenter ? node.x < orbitCenter.x : false
+            const isSelectedChild = selectedChildNodeIds.has(node.id)
             const showLabel =
               node.isRoot ||
               node.depth === 1 ||
               isSelected ||
+              isSelectedChild ||
               isSearchMatch ||
-              currentViewport.scale > 1.14
+              currentViewport.scale > 1.02
 
             return (
               <motion.div
