@@ -5,11 +5,18 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/github/license/Tike00/EnvStar?color=111827">
+  <img src="https://img.shields.io/github/stars/Tike00/EnvStar?color=111827">
+  <img src="https://img.shields.io/github/issues/Tike00/EnvStar?color=111827">
+  <img src="https://img.shields.io/badge/PRs-welcome-111827?logo=github&logoColor=white">
+  <img src="https://img.shields.io/badge/status-active-111827?logo=checkmarx&logoColor=green">
+</p>
+
+<p align="center">
   <img alt="React" src="https://img.shields.io/badge/React-19-111827?logo=react&logoColor=61dafb">
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.9-111827?logo=typescript&logoColor=3178c6">
   <img alt="Vite" src="https://img.shields.io/badge/Vite-8-111827?logo=vite&logoColor=646cff">
   <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS-4-111827?logo=tailwindcss&logoColor=38bdf8">
-  <img alt="License" src="https://img.shields.io/badge/License-TBD-111827">
 </p>
 
 ## 简介
