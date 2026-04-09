@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  font-family: 'Space Grotesk', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --envstar-bg: #090412;
+  --envstar-panel: rgba(22, 16, 38, 0.58);
+  --envstar-border: rgba(221, 214, 254, 0.09);
+  --envstar-text: #f1ecff;
+  --envstar-muted: #aaa0c7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--envstar-text);
+  background:
+    radial-gradient(circle at 16% 18%, rgba(192, 132, 252, 0.24), transparent 20%),
+    radial-gradient(circle at 82% 12%, rgba(129, 140, 248, 0.18), transparent 20%),
+    radial-gradient(circle at 52% 70%, rgba(244, 114, 182, 0.1), transparent 26%),
+    linear-gradient(180deg, #12081f 0%, #0a0615 52%, #05030c 100%);
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+body::before {
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.22) 0 1px, transparent 1.2px),
+    radial-gradient(circle, rgba(216, 180, 254, 0.14) 0 1px, transparent 1.2px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.14) 0 1px, transparent 1.2px);
+  background-position: 0 0, 120px 90px, 280px 180px;
+  background-size: 320px 320px, 420px 420px, 560px 560px;
+  opacity: 0.34;
+}
+
+body::after {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(196, 181, 253, 0.16), transparent 34%),
+    radial-gradient(circle at 18% 28%, rgba(232, 121, 249, 0.08), transparent 22%),
+    radial-gradient(circle at 76% 74%, rgba(129, 140, 248, 0.08), transparent 26%);
+  opacity: 0.78;
+}
+
+#root {
+  position: relative;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+.cosmos-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+.glass-panel {
+  border: 1px solid var(--envstar-border);
+  background: var(--envstar-panel);
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(22px);
+}
+
+.tech-markdown {
+  color: var(--envstar-text);
+  line-height: 1.8;
+  font-size: 0.98rem;
+}
+
+.tech-markdown > :first-child {
+  margin-top: 0;
+}
+
+.tech-markdown > :last-child {
+  margin-bottom: 0;
+}
+
+.tech-markdown h1,
+.tech-markdown h2,
+.tech-markdown h3,
+.tech-markdown h4,
+.tech-markdown h5,
+.tech-markdown h6 {
+  margin-top: 1.8em;
+  margin-bottom: 0.75em;
+  font-weight: 600;
+  color: #f8fbff;
+  line-height: 1.25;
+}
+
+.tech-markdown h1 {
+  font-size: 2rem;
+}
+
+.tech-markdown h2 {
+  font-size: 1.5rem;
+}
+
+.tech-markdown h3 {
+  font-size: 1.2rem;
+}
+
+.tech-markdown p,
+.tech-markdown ul,
+.tech-markdown ol {
+  margin: 1em 0;
+  color: rgba(224, 237, 255, 0.88);
+}
+
+.tech-markdown ul,
+.tech-markdown ol {
+  padding-left: 1.4rem;
+}
+
+.tech-markdown li + li {
+  margin-top: 0.35rem;
+}
+
+.tech-markdown hr {
+  margin: 1.7rem 0;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-markdown img {
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+.tech-markdown code,
+.tech-markdown pre {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.tech-markdown table th,
+.tech-markdown table td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.8rem 1rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.tech-markdown table th {
+  color: #f8fbff;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(167, 139, 250, 0.32);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
