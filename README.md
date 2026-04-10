@@ -1,7 +1,7 @@
 # Envstar
 
 <p align="center">
-  一个把 Markdown 技术笔记映射成星系知识图谱的前端原型。
+  一个把 Markdown 技术笔记映射成星系知识图谱的前端原型
 </p>
 
 <p align="center">
@@ -116,6 +116,13 @@ npm run build
 
 ```bash
 npm run preview
+```
+
+### docker启动
+
+```bash
+docker pull tike00/envstar:latest
+docker run -p 3000:80 tike00/envstar:latest
 ```
 
 ## 使用方式
